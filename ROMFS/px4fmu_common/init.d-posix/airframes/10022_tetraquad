@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# @name Tetraquad
+#
+# @type Quadrotor 
+#
+# @maintainer Bilal Maassarani <bilal.maassarani@kaust.edu.sa> (updated by Mohamad Shahab and Kuat Telegenov)
+#
+
+. ${R}etc/init.d/rc.mc_defaults
+
+# set the quadrotor type
+set MAV_TYPE 2
+
+set MIXER quad_tc
+
+set PWM_OUT 1234

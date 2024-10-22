@@ -1,0 +1,30 @@
+# Quadcopter in tetrahedral configuration
+
+[info]
+key = "4tq_t"
+description = "Quadcopter in tetrahedral configuration"
+
+[rotor_default]
+axis      = [0.0, 0.0, -1.0]
+Ct        = 1.0
+Cm        = 0.019
+
+[[rotors]]
+name      = "center_t"
+position  = [0.0, 0.0, 0.7126]
+direction = "CCW"
+
+[[rotors]]
+name     = "front_t"
+position = [0.3333, 0.0, 0.7126]
+direction = "CW"
+
+[[rotors]]
+name      = "rear_left_t"
+position  = [-0.1667, -0.2668, 0.7126]
+direction = "CW"
+
+[[rotors]]
+name     = "rear_right_t"
+position = [-0.1667, 0.2886, 0.7126]
+direction = "CCW"

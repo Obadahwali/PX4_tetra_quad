@@ -1,0 +1,51 @@
+#!/bin/sh
+#
+# @name Tetraquad
+#
+# @type Dodecarotor cox
+# @class Copter
+#
+# @output MAIN1 motor 1
+# @output MAIN2 motor 2
+# @output MAIN3 motor 3
+# @output MAIN4 motor 4
+# @output MAIN5 motor 5
+# @output MAIN6 motor 6
+# @output MAIN7 motor 7
+# @output MAIN8 motor 8
+#
+# @output AUX1 motor 9
+# @output AUX2 motor 10
+# @output AUX3 motor 11
+# @output AUX4 motor 12
+# @output AUX5 motor 13
+# @output AUX6 motor 14
+# @output AUX7 motor 15
+# @output AUX8 motor 18
+#
+# @maintainer Bilal Maassarani <bilal.maassarani@kaust.edu.sa> (updated by Mohamad Shahab and Kuat Telegenov)
+#
+
+. ${R}etc/init.d/rc.mc_defaults
+
+# set the quadrotor type
+# set MAV_TYPE 2
+# set pwm_output_values uint16_t
+set pwm_out_sim MODE_16PWM
+param set-default PWM_AUX_RATE 400
+param set-default PWM_AUX_DISARM 900
+param set-default PWM_AUX_MIN 1075
+param set-default PWM_AUX_MAX 1950
+
+param set-default PWM_MAIN_RATE 400
+
+set MIXER_FILE etc/mixers/quad_tq4_mod.main.mix
+set MIMER custom
+# set MIXER_APPEND quad_tq4_rl.main.mix
+
+# set MIXER quad_tq4_ft
+# set MIXER_AUX quad_tq4_rl
+
+# Need to set all 8 channels
+# set PWM_OUT 12345678
+# set PWM_AUX_OUT 12345678

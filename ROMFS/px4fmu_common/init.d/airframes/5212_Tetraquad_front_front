@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# @name Tetraquad_front_front
+#
+# @type Tetraquad
+# @class Copter
+#
+# @output MAIN1 motor 1
+# @output MAIN2 motor 2
+# @output MAIN3 motor 3
+# @output MAIN4 motor 4
+# @output MAIN5 feed-through of RC AUX1 channel
+# @output MAIN6 feed-through of RC AUX2 channel
+#
+# @output AUX1 feed-through of RC AUX1 channel
+# @output AUX2 feed-through of RC AUX2 channel
+# @output AUX3 feed-through of RC AUX3 channel
+# @output AUX4 feed-through of RC FLAPS channel
+#
+# @maintainer Bilal Maassarani <bilal.maassarani@kaust.edu.sa> (updated by Mohamad Shahab, Kuat Telegenov and Obadah Wali)
+#
+
+. ${R}etc/init.d/rc.mc_defaults
+
+
+set MIXER quad_tq_front_front
+
+set PWM_OUT 1234
+
+param set EKF2_AID_MASK 24
+param set EKF2_MAG_TYPE 4
+param set EKF2_HGT_MODE 3
+param set MAV_1_CONFIG 102
+param set EKF2_ASP_DELAY 0.0
+param set EKF2_OF_DELAY 50.0
+param set EKF2_EV_DELAY 0.0
